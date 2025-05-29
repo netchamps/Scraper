@@ -78,8 +78,9 @@ if submitted:
                     "query": f"{text_query} in {address}",
                     "key": API_KEY
                 }
-           elif place_type:
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+            elif place_type:
+                # Typensuche verwenden
+                 url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     params = {
         "location": coords,
         "radius": radius,
