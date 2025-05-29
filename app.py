@@ -6,8 +6,7 @@ import pandas as pd
 st.set_page_config(page_title="Google Places Scraper+", layout="centered")
 st.title("📞 Google Places Scraper mit Telefonnummer & Website")
 
-API_KEY = st.secrets["api_key"] ["openai"] 
-
+API_KEY = st.secrets["api_key"] 
 # 🔁 Geocoding: Adresse → Koordinaten
 def get_coordinates_from_address(address, api_key):
     url = "https://maps.googleapis.com/maps/api/geocode/json"
