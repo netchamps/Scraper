@@ -78,16 +78,16 @@ if submitted:
                     "query": f"{text_query} in {address}",
                     "key": API_KEY
                 }
-            elif place_type:
-                # Typensuche verwenden
-                 url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
-    params = {
-        "location": coords,
-        "radius": radius,
-        "type": place_type,
-        "keyword": text_query,  # z. B. keyword="friseur"
-        "key": API_KEY
-    }
+        elif place_type:
+            # Typensuche verwenden
+                url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+params = {
+    "location": coords,
+    "radius": radius,
+    "type": place_type,
+    "keyword": text_query,  # z. B. keyword="friseur"
+    "key": API_KEY
+}
             else:
                 st.error("❗ Bitte entweder einen Typ auswählen oder Freitext eingeben.")
                 st.stop()
